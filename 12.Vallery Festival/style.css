@@ -1,0 +1,248 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+.wrap{
+    width: 1000px;
+    height: 650px;
+    position: relative;
+    display: flex;
+}
+.popup_bg{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    z-index: 99;
+}
+.popup{
+    display: none;
+    width: 500px;
+    min-height: 200px;
+    background-color: #fff;
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid #000;
+    padding: 20px;   
+}
+.popup h1{
+    font: bold 20px/1 '애플 고딕';
+    text-align: center;
+    margin-bottom: 20px;
+}
+.popup p{
+    font: 14px/1 '애플 고딕';
+}
+.popup button{
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 2px 5px;
+    right: 20px;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+header{
+    width: 250px;
+    height: 100%;
+    background-color: lightblue;
+}
+header h1{
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    border-bottom: 1px dotted #000;
+}
+.gnb{
+    width: 100%;
+    padding: 10px;
+}
+.gnb>ul>li>a{
+    display: block;
+    width: 100%;
+    padding: 10px 5px;
+    border: 1px solid #000;
+    background-color: #fff;
+    font: bold 15px/1 "애플 고딕";
+    text-align: center;
+}
+.gnb>ul>li:hover>a{
+    background-color: #000;
+    color: #fff;
+}
+.sub{
+    display: none;
+    position: absolute;
+    left: 240px;
+    z-index: 20;
+    top: 100px;
+}
+.sub>li>a{
+    display: block;
+    font: 15px/30px '애플 고딕';
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+}
+.sub>li:hover>a{
+    background-color: #fff;
+    color: #333;
+}
+main{
+    width: 750px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+#slide{
+    width: 750px;
+    height: 350px;
+    overflow: hidden;
+}
+#slide .frame{
+    display: flex;
+    width: 2250px;
+    height: 100%;
+    position: relative;
+}
+
+#content{
+    width: 100%;
+    height: 200px;
+    display: flex;
+}
+#content .notice{
+    flex: 1;
+    padding: 10px;
+}
+#content .notice .notice_name{
+    border: 1px solid #000;
+    width: 70px;
+    height: 30px;
+    font: bold 14px/30px '애플 고딕';
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    bottom: -1px;
+    position: relative;
+}
+#content .notice ul{
+    width: 100%;
+    height: 150px;
+    border: 1px solid #000;
+    padding: 5px;
+}
+#content .notice ul li{
+    display: flex;
+    padding: 0px 8px;
+    justify-content: space-around;
+}
+
+#content .notice ul li:nth-of-type(odd){
+    background-color: #ddd;
+}
+#content .notice ul li:hover{
+    background-color: #bbb;
+}
+#content .notice ul li a{
+    display: block;
+    width: 120px;
+    height: 30px;
+    font: 12px/30px '애플 고딕';
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#content .notice ul li span{
+    font: 10px/30px '애플 고딕'; 
+}
+#content .gallery{
+    flex: 1;
+    padding: 10px;
+}
+#content .gallery .gallery_name{
+    border: 1px solid #000;
+    width: 70px;
+    height: 30px;
+    font: bold 14px/30px '애플 고딕';
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    bottom: -1px;
+    position: relative;
+}
+.gal_fic{
+    padding: 1px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    border: 1px solid #000;
+}
+.gal_fic a{
+    overflow: hidden;    
+}
+.gal_fic a img{
+    width: 40px;
+    height: 100px;
+}
+#content .baro{
+    flex: 1;
+    position: relative;
+}
+.baro p a{
+   position: absolute;
+   padding: 10px;
+   text-align: center;
+   background-color: aqua;
+   bottom: 25px;
+   font: bold 15px/1 '애플 고딕';
+   color: #000;
+}
+.baro a img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+footer{
+    display: flex;
+}
+footer h1{
+    flex: 2;
+}
+footer h1 img{
+    width: 100%;
+    height: 100%;
+}
+footer .copyright{
+    flex: 8;
+}
+footer .copyright span{
+    font: 15px/100px 'arial';
+    display: flex;
+    justify-content: center;
+    color: #bbb;
+}
+footer .family{
+    flex: 1;
+}
+footer .family select{
+    width: 200px;
+    margin-top: 40px;
+    margin-right: 10px;
+}
